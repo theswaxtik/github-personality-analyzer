@@ -1,174 +1,225 @@
-# GitHub Personality Analyzer
+<!-- HEADER -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=soft&color=0:0f172a,100:1e293b&height=180&section=header&text=GitHub%20Personality%20Analyzer&fontSize=36&fontColor=ffffff&animation=fadeIn" />
+</p>
 
-Discover what kind of developer you are based on your GitHub activity. Enter any username and get an instant breakdown — personality type, language stats, skill radar, contribution graph, repo highlights, and a roast.
-
----
-
-## Features
-
-- **Profile Overview** — avatar, bio, stats, account age
-- **Contribution Graph** — 12-month activity heatmap
-- **Developer Personality** — 9 distinct types with strengths, weaknesses, and career path
-- **Roast Mode** — context-aware roast with refresh
-- **Language Usage** — donut chart + animated progress bars
-- **Skill Radar** — Frontend, Backend, Mobile, AI, Open Source, DevOps
-- **Repo Highlights** — sortable by stars or recent activity
-- **Search History** — last 5 searches stored in localStorage
+<p align="center">
+  <img src="https://img.shields.io/badge/Vibe-Coded-8b5cf6?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/React-Frontend-61dafb?style=for-the-badge&logo=react&logoColor=black" />
+  <img src="https://img.shields.io/badge/TypeScript-Language-3178c6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vite-Build-facc15?style=for-the-badge&logo=vite&logoColor=black" />
+</p>
 
 ---
 
-## Tech Stack
+## <img src="https://img.icons8.com/ios-filled/24/ffffff/github.png"/> GitHub Personality Analyzer
 
-| Layer | Technology |
-|-------|-----------|
-| Framework | React 18 |
-| Language | TypeScript 5 |
-| Build tool | Vite 5 |
-| Styling | Tailwind CSS 3 |
-| Animation | Framer Motion 11 |
-| Charts | Chart.js 4 + react-chartjs-2 |
-| HTTP | Axios |
-| Icons | Lucide React |
-| API | GitHub REST API v3 |
+<p align="center">
+  <b>Transform GitHub profiles into personality insights, developer behavior, and shareable identity.</b>
+</p>
 
 ---
 
-## Folder Structure
+## <img src="https://img.icons8.com/ios-filled/20/ffffff/document.png"/> Overview
+
+GitHub Personality Analyzer converts public GitHub activity into meaningful insights:
+
+- Personality traits
+- Coding behavior patterns
+- Aura, Chaos, and developer metrics
+- Recruiter-style evaluation
+- Shareable developer identity cards
+
+Built as a vibecoded project, combining creativity, experimentation, and logic.
+
+---
+
+## <img src="https://img.icons8.com/ios-filled/20/ffffff/idea.png"/> Why This Project
+
+Most tools show numbers.
+This project focuses on interpreting the developer behind the code.
+
+It helps answer:
+
+- What kind of developer are you?
+- How chaotic is your coding style?
+- What impression do recruiters get?
+
+---
+
+## <img src="https://img.icons8.com/ios-filled/20/ffffff/rocket.png"/> Features
+
+- Analyze any public GitHub profile
+- Real-time GitHub API integration
+- Personality & behavior insights
+- Custom metrics (Aura, Chaos, Energy)
+- Downloadable shareable cards
+
+---
+
+## <img src="https://img.icons8.com/ios-filled/20/ffffff/picture.png"/> Screenshots
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8d80b1cc-d0ff-41ac-a321-d5d5be9b55aa" width="32%" />
+  <img src="https://github.com/user-attachments/assets/75841dbd-df81-4294-9945-df23a030d3f1" width="32%" />
+  <img src="https://github.com/user-attachments/assets/89c7f3b9-a11f-48b4-b7fa-a998c6b9d39e" width="32%" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/85108afb-726b-467b-85f8-f26d95c74b43" width="32%" />
+  <img src="https://github.com/user-attachments/assets/766df433-acbd-499f-9aee-3a86af095fe8" width="32%" />
+  <img src="https://github.com/user-attachments/assets/ae71deea-8837-44b7-ac63-b9658f61fb74" width="32%" />
+</p>
+
+---
+
+## <img src="https://img.icons8.com/ios-filled/20/ffffff/workflow.png"/> How It Works
+
+```mermaid
+graph LR
+    A[Username] --> B[GitHub API]
+    B --> C[Data Processing]
+    C --> D[Personality Engine]
+    D --> E[UI Rendering]
+    E --> F[Export Card]
+```
+
+---
+
+## <img src="https://img.icons8.com/ios-filled/20/ffffff/folder-invoices.png"/> Project Structure
 
 ```
-src/
-├── components/
-│   ├── SearchBar.tsx
-│   ├── ProfileCard.tsx
-│   ├── RepoCard.tsx
-│   ├── RepoList.tsx
-│   ├── PersonalityCard.tsx
-│   ├── RoastCard.tsx
-│   ├── LanguageChart.tsx
-│   ├── SkillChart.tsx
-│   ├── ContributionGraph.tsx
-│   ├── RecentSearches.tsx
-│   ├── LoadingScreen.tsx
-│   └── ErrorState.tsx
+github-personality-analyzer/
 │
-├── services/
-│   └── githubApi.ts
-│
-├── utils/
-│   ├── calculateLanguageStats.ts
-│   ├── generatePersonality.ts
-│   ├── roastGenerator.ts
-│   ├── calculateSkills.ts
-│   └── formatDate.ts
-│
-├── types/
-│   └── github.ts
-│
-├── pages/
-│   └── Home.tsx
-│
-├── App.tsx
-├── main.tsx
-└── index.css
+├── src/
+│   ├── components/
+│   │   ├── SearchBar.tsx
+│   │   ├── ProfileCard.tsx
+│   │   ├── RepoCard.tsx
+│   │   ├── RepoList.tsx
+│   │   ├── PersonalityCard.tsx
+│   │   ├── RoastCard.tsx
+│   │   ├── LanguageChart.tsx
+│   │   ├── SkillChart.tsx
+│   │   ├── ContributionGraph.tsx
+│   │   ├── RecentSearches.tsx
+│   │   ├── LoadingScreen.tsx
+│   │   └── ErrorState.tsx
+│   │
+│   ├── services/
+│   │   └── githubApi.ts
+│   │
+│   ├── utils/
+│   │   ├── calculateLanguageStats.ts
+│   │   ├── generatePersonality.ts
+│   │   ├── roastGenerator.ts
+│   │   ├── calculateSkills.ts
+│   │   └── formatDate.ts
+│   │
+│   ├── types/
+│   │   └── github.ts
+│   │
+│   ├── pages/
+│   │   └── Home.tsx
+│   │
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
 ```
 
 ---
 
-## Installation
-
-### Prerequisites
-
-- Node.js 20 LTS
-- npm 9+
-
-### Steps
+## <img src="https://img.icons8.com/ios-filled/20/ffffff/console.png"/> Installation
 
 ```bash
-# 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/github-personality-analyzer.git
+git clone https://github.com/theswaxtik/github-personality-analyzer.git
+
 cd github-personality-analyzer
 
-# 2. Install dependencies
 npm install
 
-# 3. (Optional) Add a GitHub token for higher rate limits
-cp .env.example .env
-# Edit .env and add your token
-
-# 4. Start development server
 npm run dev
 ```
 
-The app will be available at `http://localhost:5173`.
+---
+
+## <img src="https://img.icons8.com/ios-filled/20/ffffff/play.png"/> Usage
+
+1. Enter a GitHub username
+2. Click Analyze
+3. View personality insights
+4. Export shareable card
 
 ---
 
-## Environment Variables
+## <img src="https://img.icons8.com/ios-filled/20/ffffff/bug.png"/> Current Issues
 
-| Variable | Required | Description |
-|----------|----------|-------------|
-| `VITE_GITHUB_TOKEN` | No | GitHub PAT for 5,000 req/hr (vs 60 without) |
-
-Generate a token at [github.com/settings/tokens](https://github.com/settings/tokens). No special scopes required for public data.
+- Improper text alignment in downloaded cards
+- UI spacing inconsistencies across components
+- Font rendering issues in exported images
+- Limited personality dataset
+- Repetitive output patterns
+- Minor glitches during API loading
 
 ---
 
-## Build
+## <img src="https://img.icons8.com/ios-filled/20/ffffff/source-code.png"/> Contributing
+
+Contributions are welcome.
+
+You can:
+
+- Fix UI/UX issues
+- Improve card layout
+- Expand personality dataset
+- Optimize performance
+- Enhance analysis logic
 
 ```bash
-npm run build
+git checkout -b feature/your-feature
+
+git commit -m "Add improvement"
+
+git push origin feature/your-feature
 ```
 
-Output is in `dist/`. Preview the production build:
+---
 
-```bash
-npm run preview
-```
+## <img src="https://img.icons8.com/ios-filled/20/ffffff/goal.png"/> Roadmap
+
+- Expand personality dataset significantly
+- Improve UI/UX consistency
+- Advanced card generation system
+- AI-enhanced personality analysis
+- Mobile-first optimization
 
 ---
 
-## Deployment (Vercel)
+## <img src="https://img.icons8.com/ios-filled/20/ffffff/conference-call.png"/> Credits
 
-1. Push your project to a GitHub repository
-2. Go to [vercel.com](https://vercel.com) → **Add New Project**
-3. Import your GitHub repository
-4. Vercel auto-detects Vite — no config needed
-5. Add `VITE_GITHUB_TOKEN` in **Project Settings → Environment Variables** (optional but recommended)
-6. Click **Deploy**
+- Swastik (TechX) — Developer
+- Claude AI — Logic & refinement
 
 ---
 
-## Running on Termux (Android)
+## <img src="https://img.icons8.com/ios-filled/20/ffffff/certificate.png"/> License
 
-```bash
-# Install Node.js
-pkg install nodejs
-
-# Clone and install
-git clone https://github.com/YOUR_USERNAME/github-personality-analyzer.git
-cd github-personality-analyzer
-npm install
-
-# Start dev server
-npm run dev
-```
-
-> **Note:** Use Node.js 20 LTS. Avoid experimental versions. All dependencies in this project are ARM-compatible.
+MIT License
 
 ---
 
-## Roadmap (V1.5)
+## <img src="https://img.icons8.com/ios-filled/20/ffffff/like.png"/> Support
 
-- [ ] Compare two developers side-by-side
-- [ ] Export analysis as PDF
-- [ ] Dark/light theme toggle
-- [ ] Shareable result card (image)
-- [ ] AI-generated resume summary
-- [ ] Repo timeline chart
-- [ ] GitHub addiction meter
+<p align="center">
+  <img src="https://img.shields.io/badge/Star-Repository-black?style=for-the-badge&logo=github"/>
+  <img src="https://img.shields.io/badge/Follow-Developer-blue?style=for-the-badge&logo=github"/>
+  <img src="https://img.shields.io/badge/Fork-Project-green?style=for-the-badge&logo=git"/>
+</p>
 
 ---
 
-## License
+## <img src="https://img.icons8.com/ios-filled/20/ffffff/book.png"/> Final Note
 
-MIT © 2024
+<p align="center">
+  <b>Your GitHub profile reflects more than code — it reflects your developer identity.</b>
+</p>
